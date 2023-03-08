@@ -45,7 +45,7 @@ public class HomePage {
         utils.waitForElement(results);
         Assertion assertion = new Assertion();
         assertion.assertEquals("RESULTS", results.getText());
-        
+
         //test.assignDevice("Chrome").assignAuthor("Vivek").assignCategory("Regression").info("User is Results Page");
 
     }
