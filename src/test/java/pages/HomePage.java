@@ -37,9 +37,9 @@ public class HomePage {
         utils.waitForElement(searchBox);
         utils.moveToElement(helloSignIn);
         signIn.click();
-        utils.waitForElement(email).sendKeys("vivekgonigoudru@gmail.com");
+        utils.waitForElement(email).sendKeys("");
         continueBtn.click();
-        utils.waitForElement(password).sendKeys("Welcome@123$");
+        utils.waitForElement(password).sendKeys("");
         submit.click();
         utils.waitForElement(searchBox).sendKeys("Alexa", Keys.ENTER);
         utils.waitForElement(results);
