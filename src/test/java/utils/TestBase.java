@@ -3,10 +3,9 @@ package utils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -23,12 +22,17 @@ public class TestBase {
     public void setUp() {
         extent.attachReporter(spark);
         test = extent.createTest("Amazon Website Testing");
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
-        driver.manage().deleteAllCookies();
+        
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
+        // driver.manage().deleteAllCookies();
         driver.get("https://www.amazon.com/");
+        // driver.navigate().to("https://www.amazon.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        System.out.println(driver.getTitle());
         test.pass("Launched Amazon website");
     }
 
