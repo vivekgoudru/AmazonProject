@@ -23,7 +23,7 @@ public class TestBase {
         extent.attachReporter(spark);
         test = extent.createTest("Amazon Website Testing");
         
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "AmazonProject\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");
