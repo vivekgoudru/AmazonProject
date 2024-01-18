@@ -26,14 +26,16 @@ public class TestBase {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        // options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        // driver.manage().deleteAllCookies();
-        driver.get("https://www.amazon.com/");
-        // driver.navigate().to("https://www.amazon.com/");
+        driver.manage().deleteAllCookies();
+        driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         System.out.println(driver.getTitle());
-        test.pass("Launched Amazon website");
+        test.pass("Launched Demo website");
     }
 
     @AfterTest

@@ -21,30 +21,23 @@ public class HomePage {
     WebElement helloSignIn;
     @FindBy(id = "nav-flyout-ya-signin")
     WebElement signIn;
-    @FindBy(id = "ap_email")
-    WebElement email;
+    @FindBy(id = "user-name")
+    WebElement username;
     @FindBy(id = "continue")
     WebElement continueBtn;
-    @FindBy(id = "ap_password")
+    @FindBy(id = "password")
     WebElement password;
-    @FindBy(id = "signInSubmit")
-    WebElement submit;
-    @FindBy(xpath = "//*[@class='s-no-outline']")
-    WebElement results;
+    @FindBy(id = "login-button")
+    WebElement loginBtn;
+    @FindBy(xpath = "//span[@class='title']")
+    WebElement product;
 
     public void verifyHomePage() {
-        utils.waitForElement(searchBox);
-        utils.moveToElement(helloSignIn);
-        signIn.click();
-        utils.waitForElement(email).sendKeys("");
-        continueBtn.click();
-        utils.waitForElement(password).sendKeys("");
-        submit.click();
-        utils.waitForElement(searchBox).sendKeys("Alexa", Keys.ENTER);
-        utils.waitForElement(results);
+        username.sendKeys("error_user");
+        password.sendKeys("secret_sauce");
+        loginBtn.click();
+        utils.waitForElement(product);
         // Assertion assertion = new Assertion();
-        // assertion.assertEquals("RESULTS", results.getText());
-
         //test.assignDevice("Chrome").assignAuthor("Vivek").assignCategory("Regression").info("User is Results Page");
 
     }

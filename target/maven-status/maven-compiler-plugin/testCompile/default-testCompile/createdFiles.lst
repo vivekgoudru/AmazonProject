@@ -1,0 +1,4 @@
+tests\AmazonTest.class
+pages\Utilities.class
+pages\HomePage.class
+utils\TestBase.class
