@@ -26,13 +26,12 @@ public class TestBase {
         extent.attachReporter(spark);
         test = extent.createTest("Amazon Website Testing");
         
-        // System.setProperty("webdriver.chrome.driver", "AmazonProject\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.get("https://www.saucedemo.com/");
