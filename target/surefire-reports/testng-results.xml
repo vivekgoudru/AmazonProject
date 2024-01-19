@@ -2,20 +2,20 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-18T11:58:07 IST" name="Surefire suite" finished-at="2024-01-18T11:58:24 IST" duration-ms="16799">
+  <suite started-at="2024-01-19T11:35:52 IST" name="Surefire suite" finished-at="2024-01-19T11:36:11 IST" duration-ms="18755">
     <groups>
     </groups>
-    <test started-at="2024-01-18T11:58:07 IST" name="Surefire test" finished-at="2024-01-18T11:58:24 IST" duration-ms="16799">
+    <test started-at="2024-01-19T11:35:52 IST" name="Surefire test" finished-at="2024-01-19T11:36:11 IST" duration-ms="18755">
       <class name="tests.AmazonTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AmazonTest@61c4eee0]" started-at="2024-01-18T11:58:07 IST" name="setUp" finished-at="2024-01-18T11:58:21 IST" duration-ms="14068" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AmazonTest@548a24a]" started-at="2024-01-19T11:35:52 IST" name="setUp" finished-at="2024-01-19T11:36:07 IST" duration-ms="14683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="launch()[pri:1, instance:tests.AmazonTest@61c4eee0]" started-at="2024-01-18T11:58:21 IST" name="launch" finished-at="2024-01-18T11:58:22 IST" duration-ms="819" status="PASS">
+        <test-method signature="launch()[pri:1, instance:tests.AmazonTest@548a24a]" started-at="2024-01-19T11:36:07 IST" name="launch" finished-at="2024-01-19T11:36:08 IST" duration-ms="1647" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method is-config="true" signature="close()[pri:0, instance:tests.AmazonTest@61c4eee0]" started-at="2024-01-18T11:58:22 IST" name="close" finished-at="2024-01-18T11:58:24 IST" duration-ms="1817" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.AmazonTest@548a24a]" started-at="2024-01-19T11:36:08 IST" name="close" finished-at="2024-01-19T11:36:11 IST" duration-ms="2256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
